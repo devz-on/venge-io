@@ -249,7 +249,7 @@
               hack.hooks.movement = this;
               // attempt to get camera entity reference
               try {
-                hack.hooks.cameraEntity = this.currentCamera || (hack.hooks.pc && hack.hooks.pc.app && hack.hooks.pc.app.root && hack.hooks.pc.app.root.findByName && hack.hooks.pc.app.root.findByName('Camera'));
+                hack.hooks.cameraEntity = this.currentCamera || (this.playerCameraEntity && this.playerCameraEntity.camera);
               } catch (e) {}
               console.log('[VengeHack] movement hooked, cameraEntity?', !!hack.hooks.cameraEntity);
             }
